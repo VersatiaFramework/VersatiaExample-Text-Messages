@@ -1,9 +1,9 @@
 # Extracted into the plugin's data folder on the first start; edit it there and run /versatia reload shop
 shop:
-  open: "<green>The shop is open: {offers} offers today."
-  offer: "<green>Today: {offer} for {offer.price} ({offer.price.coins} coins)."
-  restock: "<yellow>New stock in {wait} ({wait.seconds} s)."
-  bought: "<green>{player} bought {item} for <gold>{price}</gold> coins."
+  open: "<green>The shop is open: <aqua>{offers}</aqua> offers today."
+  offer: "<green>Today: <aqua>{offer}</aqua> for <aqua>{offer.price}</aqua> (<aqua>{offer.price.coins}</aqua> coins)."
+  restock: "<yellow>New stock in <aqua>{wait}</aqua> (<aqua>{wait.seconds}</aqua> s)."
+  bought: "<green><aqua>{player}</aqua> bought <aqua>{item}</aqua> for <gold>{price}</gold> coins."
   closed:
     - "<red>The shop is closed."
     - "<gray>Come back tomorrow."
