@@ -1,4 +1,4 @@
-rootProject.name = "VersatiaExample-Modules-Messages"
+rootProject.name = "VersatiaExample-Text-Messages"
 
 pluginManagement {
     repositories {

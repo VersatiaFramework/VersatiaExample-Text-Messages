@@ -12,7 +12,7 @@ import com.github.marcoral.versatia.text.presentation
 import java.time.Duration
 import net.kyori.adventure.text.Component.text
 
-/** `Messages` and `Text` are the module's prototypes: this plugin's own bank, read from its `messages/` directory, and its own parser. */
+/** `Messages` and `Text` are prototypes VersatiaCore exposes to every plugin: this plugin's own bank, read from its `messages/` directory, and its own parser. */
 @FriendlyName("shop")
 class MessagesPlugin : VersatiaPlugin() {
     /** Runs at start and at `/versatia reload shop`; the bank was reloaded just before, so an edited file shows here. */

@@ -1,10 +1,9 @@
-name: VersatiaExample-Modules-Messages
+name: VersatiaExample-Text-Messages
 version: '${version}'
 main: com.github.marcoral.versatia.example.messages.MessagesPlugin
 api-version: '1.21'
 author: Versatia
-description: Messages read from messages/, reloaded with the plugin and filled with runtime arguments, through the Messages module.
+description: Messages read from messages/, reloaded with the plugin and filled with runtime arguments.
 # Kotlin classes come from VersatiaCore's class loader; do not list kotlin-stdlib here
 depend:
   - VersatiaCore
-  - VersatiaModule-Messages

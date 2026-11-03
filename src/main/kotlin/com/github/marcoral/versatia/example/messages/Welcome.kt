@@ -8,7 +8,7 @@ import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.inventory.ItemStack
 
-/** `player` is shown through the module's built-in presentation of `Player`, which gives `{player.world}` and `{player.location}`. */
+/** `player` is shown through the built-in presentation of `Player`, which gives `{player.world}` and `{player.location}`. */
 class Welcome(private val messages: Messages, private val shop: Shop) : Listener {
     @EventHandler
     fun onJoin(event: PlayerJoinEvent) {

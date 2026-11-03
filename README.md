@@ -1,8 +1,8 @@
-# VersatiaExample-Modules-Messages
+# VersatiaExample-Text-Messages
 
-Messages read from YAML files under `messages/`, reloaded with the plugin, sent with runtime arguments: inject `Messages` from the Messages module and write `messages["shop.bought"].send(player, arg("player", player), arg("item", stack), arg("price", 5))`. The text decides what to show of an argument, `{offer}`, `{offer.price.coins}`, `{player.location}`, and the plugin's own `Text` describes the types it shows.
+Messages read from YAML files under `messages/`, reloaded with the plugin, sent with runtime arguments: inject `Messages` and write `messages["shop.bought"].send(player, arg("player", player), arg("item", stack), arg("price", 5))`. The text decides what to show of an argument, `{offer}`, `{offer.price.coins}`, `{player.location}`, and the plugin's own `Text` describes the types it shows.
 
-Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExamples); documentation: [Messages module](https://versatiaframework.github.io/VersatiaDocs/docs/modules/messages).
+Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExamples); documentation: [Messages](https://versatiaframework.github.io/VersatiaDocs/docs/messages).
 
 **Start with** `src/main/resources/resources/messages/` and [`MessagesPlugin.kt`](src/main/kotlin/com/github/marcoral/versatia/example/messages/MessagesPlugin.kt), then [`Offer.kt`](src/main/kotlin/com/github/marcoral/versatia/example/messages/Offer.kt) and [`Shop.kt`](src/main/kotlin/com/github/marcoral/versatia/example/messages/Shop.kt).
 
@@ -23,24 +23,24 @@ sample sale made through [`Shop.kt`](src/main/kotlin/com/github/marcoral/versati
 
 ## Things to try
 
-- Edit `plugins/VersatiaExample-Modules-Messages/messages/shop.yml` on the server and run
+- Edit `plugins/VersatiaExample-Text-Messages/messages/shop.yml` on the server and run
   `/versatia reload shop`: the messages `announce()` logs show the new text, nothing in the plugin knows about reloading.
 - Break the YAML and reload: the reload fails with `shop failed to reload: messages/shop.yml is not valid YAML at line ...`,
   and the previous messages stay in use.
 - Write `{offer.colour}` in `shop.offer` and reload: `announce()` renders it at reload, so the
   reload fails with `{offer} has no property "colour"; it has: item, price`. Write `{ofer}`:
-  `No argument "ofer"; the arguments are: offer`. The module does not check braces when it loads a
+  `No argument "ofer"; the arguments are: offer`. Versatia does not check braces when it loads a
   file, so a message rendered only later fails only then. Braces that name nothing known, such as `{}` or
   `{ x }`, stay plain text.
-- Ask for `messages["shop.byu"]`: `Plugin VersatiaExample-Modules-Messages has no message "shop.byu";
+- Ask for `messages["shop.byu"]`: `Plugin VersatiaExample-Text-Messages has no message "shop.byu";
   the messages under "shop" are: shop.open, shop.offer, shop.restock, shop.bought, shop.closed`.
 
 ## Building
 
-Requires JDK 21 and VersatiaStarter with what it exports in your local Maven repository
+Requires JDK 21 and VersatiaAPI in your local Maven repository
 (`./gradlew publishToMavenLocal` in each checkout; see
 [Building the framework](https://versatiaframework.github.io/VersatiaDocs/docs/contributing/building)); running it requires a
-Paper 1.21.4 server with VersatiaCore and VersatiaModule-Messages installed, and the
+Paper 1.21.4 server with VersatiaCore installed, and the
 [CommandAPI](https://commandapi.jorel.dev) 12.x plugin for `/versatia reload` (without it, a
 plugin can still reload itself with `versatiaReload()`).
 
