@@ -1,14 +1,14 @@
-package com.github.marcoral.versatia.example.messages
+package dev.versatia.example.messages
 
-import com.github.marcoral.versatia.Phase
-import com.github.marcoral.versatia.FriendlyName
-import com.github.marcoral.versatia.VersatiaPlugin
-import com.github.marcoral.versatia.lifecycle.AutoInvoke
-import com.github.marcoral.versatia.messages.Messages
-import com.github.marcoral.versatia.text.Text
-import com.github.marcoral.versatia.text.arg
-import com.github.marcoral.versatia.text.present
-import com.github.marcoral.versatia.text.presentation
+import dev.versatia.Phase
+import dev.versatia.FriendlyName
+import dev.versatia.VersatiaPlugin
+import dev.versatia.lifecycle.AutoInvoke
+import dev.versatia.messages.Messages
+import dev.versatia.text.Text
+import dev.versatia.text.arg
+import dev.versatia.text.present
+import dev.versatia.text.presentation
 import java.time.Duration
 import net.kyori.adventure.text.Component.text
 

@@ -2,9 +2,9 @@
 
 Messages read from YAML files under `messages/`, reloaded with the plugin, sent with runtime arguments: inject `Messages` and write `messages["shop.bought"].send(player, arg("player", player), arg("item", stack), arg("price", 5))`. The text decides what to show of an argument, `{offer}`, `{offer.price.coins}`, `{player.location}`, and the plugin's own `Text` describes the types it shows.
 
-Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExamples); documentation: [Messages](https://versatiaframework.github.io/VersatiaDocs/docs/messages).
+Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExamples); documentation: [Messages](https://versatia.dev/docs/messages).
 
-**Start with** `src/main/resources/resources/messages/` and [`MessagesPlugin.kt`](src/main/kotlin/com/github/marcoral/versatia/example/messages/MessagesPlugin.kt), then [`Offer.kt`](src/main/kotlin/com/github/marcoral/versatia/example/messages/Offer.kt) and [`Shop.kt`](src/main/kotlin/com/github/marcoral/versatia/example/messages/Shop.kt).
+**Start with** `src/main/resources/resources/messages/` and [`MessagesPlugin.kt`](src/main/kotlin/dev/versatia/example/messages/MessagesPlugin.kt), then [`Offer.kt`](src/main/kotlin/dev/versatia/example/messages/Offer.kt) and [`Shop.kt`](src/main/kotlin/dev/versatia/example/messages/Shop.kt).
 
 ## What the log shows
 
@@ -19,7 +19,7 @@ Chat stays text: <red>not red</red>
 ```
 
 A player joining is greeted with their name, world and position, then sees `shop.bought` for a
-sample sale made through [`Shop.kt`](src/main/kotlin/com/github/marcoral/versatia/example/messages/Shop.kt).
+sample sale made through [`Shop.kt`](src/main/kotlin/dev/versatia/example/messages/Shop.kt).
 
 ## Things to try
 
@@ -39,7 +39,7 @@ sample sale made through [`Shop.kt`](src/main/kotlin/com/github/marcoral/versati
 
 Requires JDK 21 and VersatiaAPI in your local Maven repository
 (`./gradlew publishToMavenLocal` in each checkout; see
-[Building the framework](https://versatiaframework.github.io/VersatiaDocs/docs/contributing/building)); running it requires a
+[Building the framework](https://versatia.dev/docs/contributing/building)); running it requires a
 Paper 1.21.4 server with VersatiaCore installed, and the
 [CommandAPI](https://commandapi.jorel.dev) 12.x plugin for `/versatia reload` (without it, a
 plugin can still reload itself with `versatiaReload()`).

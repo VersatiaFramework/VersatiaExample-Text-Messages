@@ -1,6 +1,6 @@
 name: VersatiaExample-Text-Messages
 version: '${version}'
-main: com.github.marcoral.versatia.example.messages.MessagesPlugin
+main: dev.versatia.example.messages.MessagesPlugin
 api-version: '1.21'
 author: Versatia
 description: Messages read from messages/, reloaded with the plugin and filled with runtime arguments.

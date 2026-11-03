@@ -1,7 +1,7 @@
-package com.github.marcoral.versatia.example.messages
+package dev.versatia.example.messages
 
-import com.github.marcoral.versatia.text.Presentable
-import com.github.marcoral.versatia.text.presentation
+import dev.versatia.text.Presentable
+import dev.versatia.text.presentation
 import net.kyori.adventure.text.Component.text
 
 /** Describes itself: `{offer}` is the item, `{offer.price}` the price, which has properties of its own. */

@@ -1,8 +1,8 @@
-package com.github.marcoral.versatia.example.messages
+package dev.versatia.example.messages
 
-import com.github.marcoral.versatia.di.LocalBean
-import com.github.marcoral.versatia.messages.Messages
-import com.github.marcoral.versatia.text.arg
+import dev.versatia.di.LocalBean
+import dev.versatia.messages.Messages
+import dev.versatia.text.arg
 import org.bukkit.entity.Player
 import org.bukkit.inventory.ItemStack
 
