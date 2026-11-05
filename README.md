@@ -37,10 +37,10 @@ sample sale made through [`Shop.kt`](src/main/kotlin/dev/versatia/example/messag
 
 ## Building
 
-Requires JDK 21 and VersatiaAPI in your local Maven repository
+Requires JDK 25 and VersatiaAPI in your local Maven repository
 (`./gradlew publishToMavenLocal` in each checkout; see
 [Building the framework](https://versatia.dev/docs/contributing/building)); running it requires a
-Paper 1.21.4 server with VersatiaCore installed, and the
+Paper 26.3 server with VersatiaCore installed, and the
 [CommandAPI](https://commandapi.jorel.dev) 12.x plugin for `/versatia reload` (without it, a
 plugin can still reload itself with `versatiaReload()`).
 
